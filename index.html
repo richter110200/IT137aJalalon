@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" >
+    <div class="outerborder">
+        <div class="top">
+            <label for="log" id="log">log</label>
+            <label for="in" id="in">in</label>
+            <label for="form" id="form" >form</label>
+        </div>
+        <div class="middle">
+        <form action="/action_page.php">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter Email Address" required>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter Password" required>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="bottom">
+            <div class="sign"> 
+              <button type="link" class="btn btn-primary" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+            </div>
+            <div class="forgot">
+                <label for="forgot">Forgot</label>
+                <a href="">password?</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--for modal sign up form-->
+    <div id="signupmodal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-body">
+                  <div class="outer">
+                      <div class="heading">
+                          <label for="registrationtitle" id="regis">Regis</label>
+                          <label for="tration" id="trations">tration</label>
+                          <label for="formtitle" id="forms">form</label>
+                      </div>
+                      
+                      <div class="container">
+                          <h3>Create account</h3>  
+                          <form action="/action_page.php">
+                              
+                                  <table>
+                                      <tr>
+                                          <td><input class="form-control" type="text" name="firstname" placeholder="Firstname" id="fname" required></td>
+                                          <td><input class="form-control" type="text" name="lastname" placeholder="Lastname" id="lname" required></td>
+                                      </tr>
+                                  </table>
+                                      <input class="form-control" type="text" name="username" id="username" placeholder="Username" required>
+                                      <input class="form-control" type="password" name="Password" id="password" placeholder="Password" required>
+                                      <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="checkbox" class="form-check-input" name="" id="checkpass" value="checkedValue"  onclick="myFunction()" >
+                                          Show password
+                                        </label>
+                                      </div>
+                                      <input class="form-control" type="password" name="Confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                                      <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="checkbox" class="form-check-input" name="" id="checkpass1" value="checkedValue" onclick="myFunction1()">
+                                          Show password
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="checkbox" class="form-check-input" name="" id="checkaccept" value="checkedValue">
+                                          I have accept the <a href="">Terms of use</a> & <a href="">Privacy Policy</a>.
+                                        </label>
+                                      </div>
+                              <button type="submit" class="btn btn-primary" id="signupbutton">Submit</button>
+                              
+                          </form>
+
+                          <label id="already">Already have an <a href="index.html">account?</a></label>
+                      </div>
+                  </div>    
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+<script>
+  $("#signupbutton").click(function(){
+
+      let fname = $("#fname").val();
+      let lname = $("#lname").val();
+      let uname = $("#username").val();
+      let password = $( "#password" ).val();
+      let confirm = $( "#confirm_password" ).val();
+      let checking = $('#checkaccept').is(":checked");
+      if(!(password).match(confirm)){
+          alert("Password mismatched!");
+          return false;
+      }
+      else if((password.length) < 8){
+          alert("Password should atleast 8 characters in length!");
+          return false;
+          }else if((fname.length) === 0||(lname.length) === 0||(uname.length) === 0||(password.length) === 0||(confirm.length) === 0)
+          {
+            alert("Please fill up the form!");
+            return false;
+          }else if(!(checking))
+          {
+            alert("Please read first the Terms of use and Privacy policy!");
+            return false;
+          }
+          else{
+          alert("You are now successfully registered!");
+          return true;
+      }
+
+  });
+ function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+      }
+function myFunction1() {
+  var x = document.getElementById("confirm_password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+</script>
+</html>
