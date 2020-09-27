@@ -1,0 +1,163 @@
+
+.outerborder
+{
+   border: 1px outset grey;
+    width: 400px;
+    height: fit-content;
+    border-radius: 2px;
+    margin: auto; 
+    margin-top: 5%;
+}
+
+.top
+{
+    background-color: rgb(49, 146, 236);
+    border-bottom: 5px solid rgb(180, 248, 79);
+    height: 50px;
+}
+.middle
+{
+    margin-top: 71px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+.bottom
+{
+    background-color: rgba(150, 153, 150, 0.3);
+    margin-top: 55px;
+    width: 100%;
+    height: 100px;
+
+}
+
+input[type=email],#pwd
+{
+    margin-top: 10px;
+    width: 86%;
+    height: 30px;
+}
+.signupposition
+{
+    margin-top: 10px;
+}
+.sign
+{
+    width: fit-content;
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 30px;
+    position: absolute;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+.forgot
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.top label
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px;
+    
+}
+#log
+{
+   color: white;
+   margin-left: 15px;
+}
+#in
+{
+    color: rgb(180, 248, 79);
+    position: absolute;
+    margin-left: -2px;
+}
+#form
+{
+    color: rgb(212, 212, 212);
+    position: absolute;
+    margin-left: 40px;
+}
+
+.outer
+{
+    height: 500px;
+}
+.box
+{
+    border: 1px solid black;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    margin-top: 5%;
+}
+#signupbutton
+{
+    margin-top: 10px;
+}
+input[type=text]
+{
+    margin-bottom: 15px;
+}
+.heading{
+    background-color: rgb(49, 146, 236);
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 5px;
+    border-radius: 3px;
+}
+.heading label
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+#regis
+{
+    
+    color: white;
+}
+#trations
+{
+    margin-left: -5px;
+    color: rgb(180, 248, 79);
+}
+#forms
+{
+    color: rgb(212, 212, 212);
+}
+
+table td
+{
+    width: 300px;
+}
+#already
+{
+    float: right;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+    .outerborder
+        {
+        border: 1px outset grey;
+            width: 300px;
+            height: fit-content;
+            margin-left: 5%;
+            margin-top: 10%;
+            border-radius: 2px;
+        }
+
+  }
